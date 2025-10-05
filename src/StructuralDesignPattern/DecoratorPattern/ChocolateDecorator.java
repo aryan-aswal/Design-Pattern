@@ -1,27 +1,25 @@
 package StructuralDesignPattern.DecoratorPattern;
 
 public class ChocolateDecorator extends Decorator {
-    private Beverage beverage;
-
     public ChocolateDecorator(Beverage beverage) {
-        this.beverage = beverage;
+        super(beverage);
     }
 
     @Override
     public String description() {
-        return "This is a chocolate decorator";
+        return super.description() + "with chocolate";
     }
 
     @Override
     public double cost() {
-        return this.beverage.cost() + (this.beverage.cost() * 0.5);
+        return super.cost() + (super.cost() * 0.5);
     }
 
     public Beverage getBeverage() {
-        return beverage;
+        return super.beverage;
     }
 
     public void setBeverage(Beverage beverage) {
-        this.beverage = beverage;
+        super.beverage = beverage;
     }
 }

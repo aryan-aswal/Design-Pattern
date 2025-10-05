@@ -1,7 +1,6 @@
 package StructuralDesignPattern.DecoratorPattern;
 
-public class Espresso extends Beverage {
-
+public class Espresso implements Beverage {
     @Override
     public String description() {
         return "This is a Espresso";

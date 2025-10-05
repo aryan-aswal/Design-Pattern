@@ -1,6 +1,7 @@
 package StructuralDesignPattern.DecoratorPattern;
 
-public abstract class Beverage {
-    public abstract String description();
-    public abstract double cost();
+public interface Beverage {
+    public String description();
+
+    public double cost();
 }
